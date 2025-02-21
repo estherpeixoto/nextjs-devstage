@@ -16,8 +16,8 @@ export default async function Invite(props: InviteProps) {
   const inviteLink = `${process.env.API_URL}/invites/${subscriberId}`
 
   return (
-    <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
-      <div className="flex flex-col gap-10 w-full max-w-[550px]">
+    <div className="min-h-dvh flex items-center md:justify-between gap-16 flex-col md:flex-row">
+      <div className="flex flex-col gap-10 w-full md:max-w-[550px]">
         <Image src={logo} alt="devstage" width={108.5} height={30} />
 
         <div className="space-y-2">
