@@ -19,6 +19,9 @@
 
     --font-heading: var(--font-oxanium);
     --font-sans: var(--font-montserrat);
+    
+    --color-gradient-1: #4B7FCD;
+    --color-gradient-2: #8A61EA;
 
     --radius-xl: 0.625rem;
 }
