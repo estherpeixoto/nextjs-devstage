@@ -48,7 +48,7 @@ export default async function Invite(props: InviteProps) {
         </div>
       </div>
 
-      <Ranking />
+      <Ranking subscriberId={subscriberId} />
     </div>
   )
 }

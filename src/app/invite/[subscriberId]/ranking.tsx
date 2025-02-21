@@ -4,7 +4,11 @@ import cooper from '../../../assets/medal-cooper.svg'
 import gold from '../../../assets/medal-gold.svg'
 import silver from '../../../assets/medal-silver.svg'
 
-export async function Ranking() {
+interface RankingProps {
+  subscriberId: string
+}
+
+export async function Ranking({ subscriberId }: RankingProps) {
   const { ranking } = await getRanking()
 
   return (
@@ -27,9 +31,17 @@ export async function Ranking() {
                 {item.name}
               </span>
 
-              <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">
-                {item.score}
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">
+                  {item.score}
+                </span>
+
+                {subscriberId === item.id && (
+                  <span className="text-xs font-semibold px-3 py-1 rounded-md bg-gray-500 text-gray-300">
+                    Você
+                  </span>
+                )}
+              </div>
 
               {rankingPosition === 1 && (
                 <Image src={gold} alt="" className="absolute top-0 right-8" />
